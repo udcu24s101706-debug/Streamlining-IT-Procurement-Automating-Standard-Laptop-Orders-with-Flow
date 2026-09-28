@@ -1,0 +1,7 @@
+{
+  "standardLaptops": [
+    { "model": "Dell Latitude 5440", "maxPrice": 1200 },
+    { "model": "Lenovo ThinkPad T14", "maxPrice": 1300 },
+    { "model": "MacBook Air M2", "maxPrice": 1400 }
+  ]
+}

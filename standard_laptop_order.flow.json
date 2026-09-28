@@ -1,0 +1,14 @@
+{
+  "name": "Standard Laptop Order Automation",
+  "trigger": { "type": "service_catalog", "item": "Standard Laptop" },
+  "steps": [
+    { "id": 1, "action": "Look Up Record", "table": "approved_models", "condition": "model = trigger.laptop_model" },
+    { "id": 2, "if": "step1.found == true",
+      "then": [ { "action": "Set Approval", "value": "approved", "reason": "Standard model, auto-approved" } ],
+      "else": [ { "action": "Ask For Approval", "approver": "IT Asset Managers" } ] },
+    { "id": 3, "action": "Create Catalog Task", "assignment_group": "IT Procurement", "short_description": "Order laptop" },
+    { "id": 4, "action": "Send Email", "to": "requester", "template": "order_confirmation" },
+    { "id": 5, "action": "Wait For Condition", "condition": "task.state == closed" },
+    { "id": 6, "action": "Send Email", "to": "requester", "template": "delivery_notice" }
+  ]
+}

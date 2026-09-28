@@ -1,0 +1,6 @@
+{
+  "instanceUrl": "https://your-instance.service-now.com",
+  "procurementGroup": "IT Procurement",
+  "approvalGroup": "IT Asset Managers",
+  "autoApproveStandardModels": true
+}

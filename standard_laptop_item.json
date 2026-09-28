@@ -1,0 +1,9 @@
+{
+  "name": "Standard Laptop",
+  "category": "Hardware",
+  "variables": [
+    { "name": "laptop_model", "type": "select", "mandatory": true },
+    { "name": "business_justification", "type": "multi_line_text", "mandatory": false },
+    { "name": "delivery_location", "type": "single_line_text", "mandatory": true }
+  ]
+}
